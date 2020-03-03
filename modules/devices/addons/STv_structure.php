@@ -18,6 +18,8 @@ $this->device_types['tv'] = array(
         'endtime'=>array('DESCRIPTION'=>'End time'),
         'volume'=>array('DESCRIPTION'=>'Volume'),
         'mute'=>array('DESCRIPTION'=>'Mute'),
+        'view_name'=>array('DESCRIPTION'=>'View name (auto complete)'),
+        'source'=>array('DESCRIPTION'=>'Source','ONCHANGE'=>'statusUpdated'),
         'path_icons'=>array('DESCRIPTION'=>'Path channel icons pack','_CONFIG_TYPE'=>'text'),
     ),
     'METHODS'=>array(

@@ -1,10 +1,23 @@
-<div class="device-widget controller">
-    <div class='device-icon' style='background-image:url("%.icon%");background-size: 65px 65px;width:70px;height:70px;margin-right:5px'>
+<script> 
+    $(function () {
+        // инициализация всплывающих подсказок
+        $('[data-toggle="tooltip"]').tooltip({
+            delay: { show: 0, hide: 100 }
+        });
+    });
+</script> 
+<div class="device-widget controller"  onClick='callMethod("%.object_title%.switch");
+                                            $(".icon%.object_id%_light").addClass("pressed");
+                                            setTimeout("$(\".icon%.object_id%_tv\").removeClass(\"pressed\");",300);
+                                            $.get("/ajax/devices.html?op=clicked&object="+encodeURIComponent("%.object_title%"));'>
+    <div class='device-icon' id="icon%.object_id%_tv" style='background-image:url("%.icon%");background-size: 65px 65px;width:70px;height:70px;margin-right:5px'>
     </div>
-    <div class="device-header" style="%.status|"display:none;"%">%.channel%. %.name%</div>
-    <div class="device-header" style="%.status|";display:none"%">Turned off</div>
-    <div class="device-details">%.progname%</div>
-    <div class="device-details">Volume: <input type="range" class="custom-range" min="0" max="100" id="customRange2" value="%.volume%"></div> 
+    <div class="device-header">%.view_name%</div>
+    <div class="device-details" style="%.status|"display:none;"%">%.progname%
+        <span data-toggle="tooltip" data-html="true" data-placement="right" data-title='%.detail%'
+        <i class="glyphicon glyphicon-info-sign text-primary"></i>
+        </span>
+    </div>
 </div>
 
 
