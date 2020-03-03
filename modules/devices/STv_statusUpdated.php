@@ -5,7 +5,7 @@ if ($status) {
     $path_icons = $this->getProperty('path_icons');
     $name = $this->getProperty('name');
     $source = $this->getProperty('source');
-    if ($source != 'tv')
+    if ($source != 'tv' && $source!="")
         $name = $source;
     //https://epg.it999.ru/
     if (file_exists(ROOT.$path_icons.$name.'.png')) 

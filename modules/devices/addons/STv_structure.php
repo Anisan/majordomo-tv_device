@@ -11,7 +11,7 @@ $this->device_types['tv'] = array(
     'PROPERTIES'=>array( 
         'channel'=>array('DESCRIPTION'=>'Channel'),
         'name'=>array('DESCRIPTION'=>'Channel name','ONCHANGE'=>'statusUpdated'),
-        'icon'=>array('DESCRIPTION'=>'Channel icon'),
+        'icon'=>array('DESCRIPTION'=>'Channel icon (auto complete)'),
         'progname'=>array('DESCRIPTION'=>'Program name'),
         'detail'=>array('DESCRIPTION'=>'Detail'),
         'starttime'=>array('DESCRIPTION'=>'Start time'),
