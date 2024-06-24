@@ -21,11 +21,13 @@ $this->device_types['tv'] = array(
         'view_name'=>array('DESCRIPTION'=>'View name (auto complete)'),
         'source'=>array('DESCRIPTION'=>'Source','ONCHANGE'=>'statusUpdated'),
         'path_icons'=>array('DESCRIPTION'=>'Path channel icons pack','_CONFIG_TYPE'=>'text'),
+		'hk_command'=>array('DESCRIPTION'=>'Команда из HomeKit','ONCHANGE'=>'homekitCommand'),
     ),
     'METHODS'=>array(
         'switch'=>array('DESCRIPTION'=>'Switch'),
         'turnOn'=>array('DESCRIPTION'=>LANG_DEVICES_TURN_ON,'_CONFIG_SHOW'=>1),
         'turnOff'=>array('DESCRIPTION'=>LANG_DEVICES_TURN_OFF,'_CONFIG_SHOW'=>1), 
-        'statusUpdated'=>array('DESCRIPTION'=>'Status updated','CALL_PARENT'=>1), 
+        'statusUpdated'=>array('DESCRIPTION'=>'Status updated','CALL_PARENT'=>1),
+		'homekitCommand'=>array('DESCRIPTION'=>'Обработка команд HomeKit'),		
     ),
 );
